@@ -19,6 +19,7 @@ body {
 }
 
 .divorcio-section h2 {
+    font-family: "Quicksand", sans-serif;
   font-size: 24px;
   margin-bottom: 40px;
   color: #4b3d29;
@@ -67,6 +68,64 @@ body {
 .requisito p {
   font-size: 16px;
   line-height: 1.4;
+}
+
+/* ---e-se--- */
+
+.nao-cumpre {
+  background-color: #1e1e1e;
+  color: white;
+  text-align: center;
+  padding: 60px 40px;
+}
+
+.nao-cumpre h2 {
+  font-size: 43px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.nao-cumpre p {
+  font-size: 18px;
+  line-height: 1.8rem;
+  letter-spacing: normal;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #e8e6e6;
+  font-weight: 400;
+}
+
+.cta-whatsapp {
+  background-color: #999;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.cta-whatsapp .subtitulo {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.cta-whatsapp h2 {
+  font-size: 3rem;
+  margin: 10px 0 30px;
+}
+
+.botao-whatsapp {
+  background-color: #25d366;
+  color: white;
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 30px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.botao-whatsapp:hover {
+  transform: scale(1.05);
 }
 
 
