@@ -19,7 +19,6 @@ body {
 }
 
 .divorcio-section h2 {
-    font-family: "Quicksand", sans-serif;
   font-size: 24px;
   margin-bottom: 40px;
   color: #4b3d29;
@@ -96,20 +95,36 @@ body {
 }
 
 .cta-whatsapp {
-  background-color: #999;
+  background-color: #999997;
   color: white;
   text-align: center;
   padding: 60px 20px;
 }
 
 .cta-whatsapp .subtitulo {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
+  font-size: 30px;
+    margin-bottom: 10px;
 }
 
 .cta-whatsapp h2 {
-  font-size: 3rem;
+  font-size: 56px;
   margin: 10px 0 30px;
+  font-weight: 500;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.3);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
 }
 
 .botao-whatsapp {
@@ -119,12 +134,16 @@ body {
   font-size: 1.2rem;
   font-weight: bold;
   border-radius: 30px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
   text-decoration: none;
-  transition: transform 0.2s ease;
+  display: inline-block;
+  animation: pulse 1.5s infinite;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .botao-whatsapp:hover {
+  background-color: white;
+  color: black;
   transform: scale(1.05);
 }
 
@@ -149,13 +168,17 @@ body {
 }
 
 .whatsapp-button {
-  margin-top: 30px;
+  margin-top: 50px;
   padding: 15px 30px;
   background-color: #25D366;
   color: white;
   text-decoration: none;
   font-weight: bold;
   border-radius: 5px;
+}
+.btn-first {
+    margin-top: 50px;
+
 }
 
 .whatsapp-float {
@@ -175,6 +198,48 @@ body {
 .whatsapp-float::before {
   content: '💬 ';
 }
+
+.api-comentario {
+  overflow: hidden;
+  width: 100%;
+  background-color: #fff;
+  padding: 20px 0;
+}
+
+.review-container {
+  display: flex;
+  gap: 50px;
+  animation: move-left 80s linear infinite;
+  white-space: nowrap;
+}
+
+.review {
+  min-width: max-content;
+  height: 173px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eef1f4;
+  border-radius: 10px;
+  padding: 0 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  color: #333;
+  font-size: 16px;
+}
+
+@keyframes move-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.review-container {
+  animation: move-left 20s linear infinite;
+}
+
 
 
 /* Sara */
@@ -403,4 +468,109 @@ body {
 
 .team-section {
   animation: slideIn 1s ease-out;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #333;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.phone {
+  color: #000;
+  text-decoration: underline;
+}
+
+.email {
+  color: #666;
+}
+
+.footer-right {
+  text-align: right;
+}
+
+.txt-nossotime {
+    max-width: 800px;
+    margin: 60px auto;
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #f0f0f0;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto;
+}
+
+.logo img {
+    max-width: 200px;
+    height: auto;
+}
+
+.container-fototexto {
+  display: flex;
+  min-height: 100vh;
+}
+
+.left {
+  flex: 1;
+  background-color: #1e1e1e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.left img {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  object-fit: cover;
+}
+
+.right {
+  flex: 1;
+  background-color: #fff;
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.right h1 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  line-height: 1.4;
+}
+
+.right h1 span {
+  color: #555;
+  font-weight: 400;
+}
+
+.benefit {
+  margin-bottom: 30px;
+}
+
+.benefit h2 {
+  font-size: 1.5rem;
+  color: #d0d0d0;
+  margin-bottom: 5px;
+}
+
+.benefit p {
+  font-size: 1rem;
+  line-height: 1.6;
 }
