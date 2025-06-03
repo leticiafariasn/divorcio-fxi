@@ -68,3 +68,62 @@ body {
   font-size: 16px;
   line-height: 1.4;
 }
+
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.left {
+  flex: 1;
+  background-color: #1e1e1e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.left img {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  object-fit: cover;
+}
+
+.right {
+  flex: 1;
+  background-color: #fff;
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.right h1 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  line-height: 1.4;
+}
+
+.right h1 span {
+  color: #555;
+  font-weight: 400;
+}
+
+.benefit {
+  margin-bottom: 30px;
+}
+
+.benefit h2 {
+  font-size: 1.5rem;
+  color: #d0d0d0;
+  margin-bottom: 5px;
+}
+
+.benefit p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+
+
