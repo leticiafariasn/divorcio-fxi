@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Quicksand", sans-serif;
+}
+
+.divorcio-section {
+  padding: 40px 20px;
+  background-color: #fff;
+  color: #333;
+  text-align: center;
+  justify-content: center;
+}
+
+.divorcio-section h2 {
+  font-size: 24px;
+  margin-bottom: 40px;
+  color: #4b3d29;
+}
+
+.requisitos-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 60px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.requisito {
+  max-width: 250px;
+  text-align: center;
+}
+
+.icone {
+  width: 160px;
+  height: 160px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease;
+}
+
+.icone:hover {
+  transform: scale(0.9);
+}
+
+.icone1 {
+  background-image: url('assets/hands.avif');
+}
+
+.icone2 {
+  background-image: url('assets/pen.avif');
+}
+
+.icone3 {
+  background-image: url('assets/children.avif');
+}
+
+.requisito p {
+  font-size: 16px;
+  line-height: 1.4;
+}
