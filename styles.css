@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: "Quicksand", sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 
 .divorcio-section {
@@ -67,4 +67,281 @@ body {
 .requisito p {
   font-size: 16px;
   line-height: 1.4;
+}
+
+
+
+/* Letícia */
+.vinte-dias {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 100px 20px;
+  text-align: center;
+  color: white;
+}
+
+.vinte-dias h1 {
+  font-size: 3em;
+  margin: 0;
+}
+
+.vinte-dias p {
+  font-size: 1em;
+  margin-top: 20px;
+}
+
+.whatsapp-button {
+  margin-top: 30px;
+  padding: 15px 30px;
+  background-color: #25D366;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  text-decoration: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+.whatsapp-float::before {
+  content: '💬 ';
+}
+
+
+/* Sara */
+
+.team-section {
+  padding: 80px 0;
+  background-color: #2a2a2a;
+  position: relative;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 3.5rem;
+  font-weight: 300;
+  margin-bottom: 20px;
+  color: white;
+  letter-spacing: 2px;
+}
+
+.title-underline {
+  width: 80px;
+  height: 2px;
+  background-color: white;
+  margin: 0 auto 80px;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  perspective: 1200px;
+  overflow: hidden;
+}
+
+.carousel-track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.carousel-slide {
+  position: absolute;
+  width: 450px;
+  height: 500px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  cursor: pointer;
+  background: linear-gradient(145deg, #3a3a3a, #2a2a2a);
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+/* Posições do carrossel */
+.carousel-slide.active {
+  transform: translateX(0) scale(1.1) rotateY(0deg);
+  z-index: 10;
+  filter: brightness(1.1);
+}
+
+.carousel-slide.prev {
+  transform: translateX(-380px) scale(0.85) rotateY(25deg);
+  z-index: 5;
+  filter: brightness(0.7);
+}
+
+.carousel-slide.next {
+  transform: translateX(380px) scale(0.85) rotateY(-25deg);
+  z-index: 5;
+  filter: brightness(0.7);
+}
+
+.carousel-slide.far-left {
+  transform: translateX(-650px) scale(0.7) rotateY(35deg);
+  z-index: 1;
+  filter: brightness(0.5);
+  opacity: 0.6;
+}
+
+.carousel-slide.far-right {
+  transform: translateX(650px) scale(0.7) rotateY(-35deg);
+  z-index: 1;
+  filter: brightness(0.5);
+  opacity: 0.6;
+}
+
+.carousel-slide.hidden {
+  opacity: 0;
+  transform: translateX(0) scale(0.5);
+  z-index: 0;
+}
+
+/* Navegação removida */
+.carousel-nav {
+  display: none;
+}
+
+/* Indicadores */
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 60px;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.indicator.active {
+  background: white;
+  transform: scale(1.2);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.indicator:hover {
+  background: rgba(255, 255, 255, 0.6);
+  transform: scale(1.1);
+}
+
+/* Efeitos de hover nas imagens */
+.carousel-slide:hover img {
+  transform: scale(1.05);
+}
+
+.carousel-slide.active:hover {
+  transform: translateX(0) scale(1.15) rotateY(0deg);
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+  .carousel-slide {
+    width: 380px;
+    height: 420px;
+  }
+
+  .carousel-slide.prev {
+    transform: translateX(-300px) scale(0.8) rotateY(25deg);
+  }
+
+  .carousel-slide.next {
+    transform: translateX(300px) scale(0.8) rotateY(-25deg);
+  }
+
+  .carousel-slide.far-left {
+    transform: translateX(-500px) scale(0.6) rotateY(35deg);
+  }
+
+  .carousel-slide.far-right {
+    transform: translateX(500px) scale(0.6) rotateY(-35deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2.5rem;
+  }
+
+  .carousel-container {
+    height: 400px;
+  }
+
+  .carousel-slide {
+    width: 280px;
+    height: 320px;
+  }
+
+  .carousel-slide.active {
+    transform: translateX(0) scale(1) rotateY(0deg);
+  }
+
+  .carousel-slide.prev {
+    transform: translateX(-200px) scale(0.7) rotateY(20deg);
+  }
+
+  .carousel-slide.next {
+    transform: translateX(200px) scale(0.7) rotateY(-20deg);
+  }
+
+  .carousel-slide.far-left,
+  .carousel-slide.far-right {
+    opacity: 0;
+    transform: translateX(0) scale(0.5);
+  }
+
+  .carousel-nav {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* Animação de entrada */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.team-section {
+  animation: slideIn 1s ease-out;
 }
