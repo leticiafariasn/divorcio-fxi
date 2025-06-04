@@ -151,6 +151,7 @@ body {
 
 /* Letícia */
 .vinte-dias {
+  background-image: url(assets/bg.avif);
   background-color: rgba(0, 0, 0, 0.6);
   padding: 100px 20px;
   text-align: center;
